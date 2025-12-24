@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홈</title>
+  <style>
+    body{font-family:system-ui, sans-serif; max-width:720px; margin:40px auto}
+    nav ul{list-style:none; padding:0; display:flex; gap:12px}
+    a{text-decoration:none}
+  </style>
+</head>
+<body>
+  <h1>홈</h1>
+  <nav>
+    <ul>
+      <li><a href="/signup">회원가입</a></li>
+      <li><a href="/login">로그인</a></li>
+      <li><a href="/logout">로그아웃</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+  <footer>
+    {% if username %}
+      <p>{{ username }}님 환영합니다.</p>
+    {% else %}
+      <p>비로그인 상태입니다.</p>
+    {% endif %}
+  </footer>
+</body>
+</html>

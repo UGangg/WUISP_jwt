@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <style>
+    body{font-family:system-ui, sans-serif; max-width:720px; margin:40px auto}
+    form{display:grid; gap:8px; max-width:360px}
+  </style>
+</head>
+<body>
+  <h1>회원가입</h1>
+
+  {% if err %}<p style="color:#c00">{{ err }}</p>{% endif %}
+
+  <form method="POST" action="/signup">
+    <label>아이디 <input name="username" required></label>
+    <label>비밀번호 <input name="password" type="password" required></label>
+    <button type="submit">가입</button>
+  </form>
+
+  <p><a href="/">홈으로</a></p>
+</body>
+</html>
